@@ -1,0 +1,235 @@
+{% extends "base/base.html" %}
+{% block title %}Dashboard{% endblock title %}
+{% load static %}
+{% block content %}
+<!--/ Page Header End -->
+         <!--================================-->
+         <!-- Page Inner Start -->
+         <!--================================-->
+         <div class="page-inner">
+            <!--================================-->
+            <!-- Main Wrapper Start -->
+            <!--================================-->
+            <div id="main-wrapper">
+               <!--================================-->
+               <!-- Breadcrumb Start -->
+               <!--================================-->
+               <div class="pageheader pd-y-25">
+                  <div class="pd-t-5 pd-b-5">
+                     <h1 class="pd-0 mg-0 tx-20 text-overflow">Dashboard v.1</h1>
+                  </div>
+                  <div class="breadcrumb pd-0 mg-0">
+                     <a class="breadcrumb-item" href="/mega-soft/"><i class="icon ion-ios-home-outline"></i> Home</a>
+                     <a class="breadcrumb-item" href="javascript:void(0)">Dashboard</a>
+
+                  </div>
+               </div>
+               <!--/ Breadcrumb End -->
+               <!--================================-->
+               <!-- Count Card Start -->
+               <!--================================-->
+
+               <div class="row clearfix mb-4">
+                  <div class="col-lg-3 col-md-6 col-sm-12 ">
+                     <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                           <h5 class="card-title">My Profile</h5>
+                           <div class="text-center">
+                              <img src="{% static "media/person.svg" %}" class="img-fluid" alt="person" width="80" height="80">
+                           </div>
+                           <br>
+                           <a href="/mega-soft/e-profile" class="card-link">Go to My Profile</a>
+
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                     <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                           <h5 class="card-title">Holiday</h5>
+                           <div class="text-center">
+                              <img class="img-fluid" src="{% static "media/holiday-island-tourism-svgrepo-com.svg" %}" alt="holiday"
+                                 width="80" height="80">
+                           </div>
+                           <br>
+                           <a href="/mega-soft/e-holiday" class="card-link">Go to Holiday</a>
+
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                     <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                           <h5 class="card-title">Payslip</h5>
+                           <div class="text-center">
+                              <img class="img-fluid" src="{% static "media/cash.svg" %}" alt="holiday" width="80" height="80">
+                           </div>
+                           <br>
+                           <a href="/mega-soft/e-payslip" class="card-link">Got to Payslip</a>
+
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                     <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                           <h5 class="card-title">Daily Attendance</h5>
+                           <div class="text-center">
+                              <img class="img-fluid" src="{% static "media/calendar.svg" %}" alt="holiday" width="80" height="80">
+                           </div>
+                           <br>
+                           <a href="/mega-soft/e-attendance" class="card-link">Go to Daily Attendance</a>
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="row clearfix mb-4">
+                  <div class="col-lg-3 col-md-6 col-sm-12 ">
+                     <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                           <h5 class="card-title">Leave Application</h5>
+                           <div class="text-center">
+                              <img src="{% static "media/memo-pencil-svgrepo-com.svg" %}" class="img-fluid" alt="person" width="80"
+                                 height="80">
+                           </div>
+                           <br>
+                           <a href="/mega-soft/leave-application" class="card-link">Go to Leave Application</a>
+
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                     <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                           <h5 class="card-title">Punch Attendance</h5>
+                           <div class="text-center">
+                              <img class="img-fluid" src="{% static "media/fingerprint.svg" %}" alt="holiday" width="80" height="80">
+                           </div>
+                           <br>
+                           <a href="/public/e-attendance" class="card-link">Got to Punch Attendance</a>
+
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                     <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                           <h5 class="card-title">Register Location</h5>
+                           <div class="text-center">
+                              <img class="img-fluid" src="{% static "media/pen.svg" %}" alt="holiday" width="80" height="80">
+                           </div>
+                           <br>
+                           <a href="/public/register" class="card-link">Got to Register Location</a>
+
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                     <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                           <h5 class="card-title">News</h5>
+                           <div class="text-center">
+                              <img class="img-fluid" src="{% static "media/news.svg" %}" alt="holiday" width="80" height="80">
+                           </div>
+                           <br>
+                           <a href="/public/e-news" class="card-link">Got to News</a>
+
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+            <div class="col-md-12 col-lg-12">
+               <div class="card mb-4 shadow-1">
+                  <div class="card-header">
+                     <h4 class="card-header-title">
+                        Attendance Summary
+                     </h4>
+                     <div class="card-header-btn">
+                        <a href="javascript:void(0)" data-toggle="collapse" class="btn btn-info"
+                           data-target="#collapse1" aria-expanded="true" data-original-title="" title=""
+                           data-init="true"><i class="ion-ios-arrow-down"></i></a>
+                        <a href="javascript:void(0)" data-toggle="refresh" class="btn btn-warning"><i
+                              class="ion-android-refresh"></i></a>
+                        <a href="javascript:void(0)" data-toggle="expand" class="btn btn-success"><i
+                              class="ion-android-expand"></i></a>
+                        <a href="javascript:void(0)" data-toggle="remove" class="btn btn-danger"><i
+                              class="ion-ios-trash-outline"></i></a>
+                     </div>
+                  </div>
+                  <div class="card-body collapse show" id="collapse1">
+                     <table class="table table-responsive-sm">
+                        <thead>
+                           <tr>
+                              <th>Date</th>
+                              <th>Day Type</th>
+                              <th>Worked Hour</th>
+                              <th>In</th>
+                              <th>Out</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                              <td>Hello</td>
+                           </tr>
+                           <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                              <td>Hello</td>
+                           </tr>
+                           <tr>
+                              <th scope="row">3</th>
+                              <td>Larry</td>
+                              <td>the Bird</td>
+                              <td>@twitter</td>
+                              <td>Hello</td>
+                           </tr>
+                           <tr>
+                              <th scope="row">4</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                              <td>Hello</td>
+                           </tr>
+                           <tr>
+                              <th scope="row">5</th>
+                              <td>Larry</td>
+                              <td>the Bird</td>
+                              <td>@twitter</td>
+                              <td>Hello</td>
+                           </tr>
+
+
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+{% endblock content %}
+{% block script %}
+     // Toster Notification
+         $(document).ready(function () {
+            setTimeout(function () {
+               toastr.options = {
+                  positionClass: 'toast-top-right',
+                  closeButton: true,
+                  progressBar: true,
+                  showMethod: 'slideDown',
+                  timeOut: 5000
+               };
+               toastr.info('Hi, welcome to MegaSoft');
+
+            }, 300);
+
+         });
+{% endblock script %}
+

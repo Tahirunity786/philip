@@ -1,0 +1,78 @@
+{% extends "base/base.html" %}
+{% block title %}Birthday{% endblock title %}
+{% load static %}
+{% block content %}
+<!--================================-->
+<!-- Page Inner Start -->
+<!--================================-->
+<div class="page-inner">
+    <!--================================-->
+    <!-- Main Wrapper Start -->
+    <!--================================-->
+    <div id="main-wrapper">
+        <!--================================-->
+        <!-- Breadcrumb Start -->
+        <!--================================-->
+        <div class="pageheader pd-y-25">
+            <div class="pd-t-5 pd-b-5">
+                <h1 class="pd-0 mg-0 tx-20 text-overflow">Mark Attendance</h1>
+            </div>
+            <div class="breadcrumb pd-0 mg-0">
+                <a class="breadcrumb-item" href="/mega-soft/"><i class="icon ion-ios-home-outline"></i> Home</a>
+                <a class="breadcrumb-item" href="javascript:void(0)">Mark Attendance</a>
+
+            </div>
+        </div>
+        <!--/ Breadcrumb End -->
+        <!--================================-->
+        <!-- Count Card Start -->
+        <!--================================-->
+        <div class="row mt-5 mb-5">
+            <div class="col-lg-6 col-md-6 col-sm-12 mb-5">
+                <div class="card">
+                    <div class="card-body pd-b-0">
+                        <div class="mt-4 p-2 tx-center">
+                            {% if info.emp_info_dbsf.emp_pro_pic %}
+                            <img src="/media/{{info.emp_info_dbsf.emp_pro_pic}}" class="rounded-circle" width="150"
+                                alt="">
+                            {% else %}
+                            <img src="{% static "assets/images/avatar/avatar.png" %}" class="rounded-circle"
+                                width="150" alt="default">
+                            {% endif %}
+
+                            <h4 class="card-title mt-2">{{info.emp_name}}</h4>
+                            {% if info.desig_id.designation%}
+
+                            <h6 class="card-subtitle tx-gray-500 tx-14 pd-y-10">{{info.desig_id.designation}}</h6>
+                            {% else %}
+                            <h6 class="card-subtitle tx-gray-500 tx-14 pd-y-10">Employee</h6>
+                            {% endif %}
+
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="card-body">
+                    <div class="card-header text-center">
+                        <h4 class="card-header-title">
+                            {{request.user}}
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h1 class="mb-5">Birthday</h1>
+                <div class="card mt-2">
+                    <div class="card-body m-auto text-center p-5">
+                        <img src="{% static 'media/cake.svg' %}" alt="Birthday" class="img-fluid " height="100"
+                            width="100">
+                        <hr>
+                        <h4>Your Birthday</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

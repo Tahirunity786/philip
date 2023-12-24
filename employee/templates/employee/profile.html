@@ -1,0 +1,261 @@
+
+{% extends "base/base.html" %}
+{% block title %}Profile{% endblock title %}
+{% load static %}
+{% block content %}
+
+<!--/ Page Header End -->
+            <!--================================-->
+            <!-- Page Inner Start -->
+            <!--================================-->
+            <div class="page-inner">
+                <!--================================-->
+                <!-- Main Wrapper Start -->
+                <!--================================-->
+                <div id="main-wrapper">
+                    <!--================================-->
+                    <!-- Breadcrumb Start -->
+                    <!--================================-->
+                    <div class="pageheader pd-y-25">
+                        <div class="pd-t-5 pd-b-5">
+                            <h1 class="pd-0 mg-0 tx-20 text-overflow">User Profile</h1>
+                        </div>
+                        <div class="breadcrumb pd-0 mg-0 mb-3">
+                            <a class="breadcrumb-item" href="/mega-soft/"><i class="icon ion-ios-home-outline"></i>
+                                Home</a>
+
+                            <a class="breadcrumb-item" href="javascript:void(0)">Profile</a>
+                        </div>
+
+
+                        <div class="row  mg-b-25">
+                            <div class="col-lg-4 col-xlg-3 col-md-5">
+                                <div class="card">
+                                    <div class="card-body pd-b-0">
+                                        <div class="mt-4 tx-center">
+                                            {% if info.emp_info_dbsf.emp_pro_pic %}
+                                            <img src="/media/{{info.emp_info_dbsf.emp_pro_pic}}" class="rounded-circle"
+                                                width="150" alt="">
+                                            {% else %}
+                                            <img src="{% static "assets/images/avatar/avatar.png" %}" class="rounded-circle"
+                                                width="150" alt="default">
+                                            {% endif %}
+                                            
+                                            <h4 class="card-title mt-2">{{info.emp_name}}</h4>
+                                            {% if info.desig_id.designation%}
+
+                                            <h6 class="card-subtitle tx-gray-500 tx-14 pd-y-10">{{info.desig_id.designation}}</h6>
+                                            {% else %}
+                                            <h6 class="card-subtitle tx-gray-500 tx-14 pd-y-10">Employee</h6>
+                                            {% endif %}
+                                            <p class="tx-gray-500">{{request.user}}</p>
+                                            <div class="row no-gutters text-center justify-content-md-center pd-5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="card-body">
+                                        <div class="card-header">
+                                            <h4 class="card-header-title">
+                                                About Me
+                                            </h4>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table table-responsive-sm">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><strong>Email:</strong></td>
+                                                        {% if info.email %}
+                                                        <td>{{info.email}}</td>
+                                                        {% else %}
+                                                        <td>youremail@gmail.com</td>
+
+                                                        {% endif %}
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Website:</strong></td>
+
+                                                        <td>megasoft.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>About:</strong></td>
+                                                        {% if info.desig_id.designation%}
+                                                        <td>{{info.desig_id.designation}}</td>
+                                                      
+                                                        {% else %}
+                                                        
+                                                        <td>Employee</td>
+                                                        {% endif %}
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Joined:</strong></td>
+                                                     
+                                                       
+                                                        <td>{{info.doj}}</td>
+                                                        
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Departmant:</strong></td>
+                                                        {% if info.dept_id.department%}
+                                                        <td>{{info.dept_id.department}}</td>
+                                                      
+                                                        {% else %}
+                                                        
+                                                        <td>Departmant not added</td>
+                                                        {% endif %}
+                                                    
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Experience:</strong></td>
+                                                        {% if info.experience%}
+                                                        <td>{{info.experience}} years</td>
+                                                      
+                                                        {% else %}
+                                                        
+                                                        <td>Experience not added</td>
+                                                        {% endif %}
+                                                    
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Address:</strong></td>
+                                                        {% if info.emp_info_dbsf.address1 %}
+                                                        <td>{{info.emp_info_dbsf.address1}}</td>
+                                                        {% else %}
+                                                        
+                                                        <td>Employee has no adddress</td>
+                                                        {% endif %}
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Phone:</strong></td>
+                                                        <td>{{info.mobileno}}</td>
+                                                    </tr>
+                                                   
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-xlg-9 col-md-7">
+
+                                <div class="card mb-5">
+                                    <h2 class="p-2">Settings</h2>
+                                    <div class="card-body mb-4">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label class="col-md-12">Full Name</label>
+                                                <div class="col-md-12">
+                                                    <input type="text" placeholder="Johnathan Doe" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="example-email" class="col-md-12">Email</label>
+                                                <div class="col-md-12">
+                                                    <input type="email" placeholder="johnathan@admin.com"
+                                                        class="form-control" name="example-email" id="example-email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">Password</label>
+                                                <div class="col-md-12">
+                                                    <input type="password" value="password" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">Password again</label>
+                                                <div class="col-md-12">
+                                                    <input type="password" value="password" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">Phone No</label>
+                                                <div class="col-md-12">
+                                                    <input type="text" placeholder="123 456 7890" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">About</label>
+                                                <div class="col-md-12">
+                                                    <textarea rows="5"
+                                                        class="form-control form-control-line"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-12">Select Country</label>
+                                                <div class="col-sm-12">
+                                                    <select class="form-control form-control-line">
+                                                        <option>Uk</option>
+                                                        <option>Germany</option>
+                                                        <option>Italy</option>
+                                                        <option>Natherland</option>
+                                                        <option>Australia</option>
+                                                        <option>India</option>
+                                                        <option>Usa</option>
+                                                        <option>Canada</option>
+                                                        <option>France</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <button class="btn btn-info">Update Profile</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <h2 class="p-2">My Contact</h2>
+                                    <div class="card-body" style="margin-top: 20px;">
+                                        <form class="form-horizontal">
+                                            <div class="row">
+                                                <label class="col-sm-4 form-control-label">Name: <span
+                                                        class="tx-danger">*</span></label>
+                                                <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Enter Your Name">
+                                                </div>
+                                            </div>
+                                            <div class="row mg-t-20">
+                                                <label class="col-sm-4 form-control-label">Email: <span
+                                                        class="tx-danger">*</span></label>
+                                                <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Enter Your Email">
+                                                </div>
+                                            </div>
+                                            <div class="row mg-t-20">
+                                                <label class="col-sm-4 form-control-label">Messates: <span
+                                                        class="tx-danger">*</span></label>
+                                                <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+                                                    <textarea rows="5" class="form-control"
+                                                        placeholder="Enter Your Messages"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mg-t-20">
+                                                <div class="col-sm-12">
+                                                    <button class="btn btn-info btn-block">Send Message</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+               
+{% endblock content %}
+
+            

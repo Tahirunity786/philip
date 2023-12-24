@@ -1,0 +1,154 @@
+{% extends "base/base.html" %}
+{% block title %}Attendance Summary{% endblock title %}
+
+{% block content %}
+<!--/ Page Header End -->
+<!--================================-->
+<!-- Page Inner Start -->
+<!--================================-->
+<div class="page-inner">
+    <!--================================-->
+    <!-- Main Wrapper Start -->
+    <!--================================-->
+    <div id="main-wrapper">
+        <!--================================-->
+        <!-- Breadcrumb Start -->
+        <!--================================-->
+        <div class="pageheader pd-y-25">
+            <div class="pd-t-5 pd-b-5">
+                <h1 class="pd-0 mg-0 tx-20 text-overflow">Attendance Summary</h1>
+            </div>
+            <div class="breadcrumb pd-0 mg-0">
+                <a class="breadcrumb-item" href="/mega-soft/"><i class="icon ion-ios-home-outline"></i> Home</a>
+                <a class="breadcrumb-item" href="javascript:void(0)">Attendance Summary</a>
+
+            </div>
+        </div>
+
+        <!--/ Breadcrumb End -->
+        <!--================================-->
+        <!-- Count Card Start -->
+        <!--================================-->
+        <div class="mpl" style="height: 100px;">
+            <a href="/mega-soft/e-attendance" class="btn btn-primary btn-with-icon mb-5">
+                <div class="ht-40 justify-content-between">
+                    <span class="pd-x-15">Mark Attendance</span>
+                    <span class="icon wd-40"><i class="fa fa-pencil"></i></span>
+                </div>
+            </a>
+        </div>
+        <form action="" method="post" class="w-100">
+            <div class="row w-75">
+                {% csrf_token %}
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    <label for="fdf">From</label>
+                    <input type="date" name="fdate" id="fdf" class="form-control">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <label for="ldf">To</label>
+                    <input type="date" name="ldate" id="ldf" class="form-control">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <br>
+                    
+                    <button type="submit btn-with-icon" class="btn btn-primary mt-2">Filter
+                        <span class="icon wd-40"><i class="fa fa-filter"></i></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="card mb-4 shadow-1">
+            <div class="card-header">
+                <h4 class="card-header-title">
+                    Hoverable Table
+                </h4>
+                <div class="card-header-btn">
+                    <a href="javascript:void(0)" data-toggle="collapse" class="btn btn-info" data-target="#collapse3"
+                        aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
+                    <a href="javascript:void(0)" data-toggle="refresh" class="btn btn-warning"><i
+                            class="ion-android-refresh"></i></a>
+                    <a href="javascript:void(0)" data-toggle="expand" class="btn btn-success"><i
+                            class="ion-android-expand"></i></a>
+                    <a href="javascript:void(0)" data-toggle="remove" class="btn btn-danger"><i
+                            class="ion-ios-trash-outline"></i></a>
+                </div>
+            </div>
+            <div class="card-body collapse show" id="collapse3" style="max-height: 500px;">
+                <table class="table table-hover table-responsive-sm">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                      
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

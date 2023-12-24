@@ -1,0 +1,25 @@
+from django.contrib.auth.base_user import BaseUserManager
+
+class CustomUserManager(BaseUserManager):
+    use_in_migrations=True
+    def create_user(self, USERID, password=None, **extra_fields):
+        if not USERID:
+            raise ValueError("The USERID field must be provided")
+        user = self.model(USERID=USERID, **extra_fields)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+
+    def create_superuser(self, USERID, password=None, **extra_fields):
+        extra_fields.setdefault("is_staff", True)
+        extra_fields.setdefault("is_superuser", True)
+        extra_fields.setdefault("is_active", True)
+
+        if extra_fields.get("is_staff") is not True:
+            raise ValueError("Superuser must have is_staff=True.")
+        if extra_fields.get("is_superuser") is not True:
+            raise ValueError("Superuser must have is_superuser=True.")
+        if extra_fields.get("is_active") is not True:
+            raise ValueError("Superuser must have is_active=True.")
+
+        return self.create_user(USERID=USERID, password=password, **extra_fields)

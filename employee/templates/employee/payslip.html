@@ -1,0 +1,238 @@
+{% extends "base/base.html" %}
+{% block title %}Payslip{% endblock title %}
+
+{% block content %}
+<!--================================-->
+<!-- Page Inner Start -->
+<!--================================-->
+<div class="page-inner">
+    <!--================================-->
+    <!-- Main Wrapper Start -->
+    <!--================================-->
+    <div id="main-wrapper">
+        <!--================================-->
+        <!-- Breadcrumb Start -->
+        <!--================================-->
+        <div class="pageheader pd-y-25">
+            <div class="pd-t-5 pd-b-5">
+                <h1 class="pd-0 mg-0 tx-20 text-overflow">Payslip</h1>
+            </div>
+            <div class="breadcrumb pd-0 mg-0">
+                <a class="breadcrumb-item" href="/mega-soft/"><i class="icon ion-ios-home-outline"></i> Home</a>
+                <a class="breadcrumb-item" href="javascript:void(0)">Payslip</a>
+
+            </div>
+        </div>
+        <!--/ Breadcrumb End -->
+        <!--================================-->
+        <!-- Count Card Start -->
+        <!--================================-->
+
+        <form action="" method="post" class="w-100">
+            <div class="row w-75">
+                {% csrf_token %}
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    <label for="fdf">Date</label>
+                    <input type="date" name="fdate" id="fdf" class="form-control">
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <br>
+
+                    <button type="submit" class="btn btn-primary mt-2">Show
+
+                    </button>
+                </div>
+            </div>
+        </form>
+      
+        <div class="col-md-12 col-lg-12">
+            <div class="card mb-4 shadow-1">
+                <div class="card-header">
+                    <h4 class="card-header-title">
+                        Earning
+                    </h4>
+                    <div class="card-header-btn">
+                        <a href="javascript:void(0)" data-toggle="collapse" class="btn btn-info" data-target="#collapse1"
+                            aria-expanded="true" data-original-title="" title="" data-init="true"><i
+                                class="ion-ios-arrow-down"></i></a>
+                        <a href="javascript:void(0)" data-toggle="refresh" class="btn btn-warning"><i
+                                class="ion-android-refresh"></i></a>
+                        <a href="javascript:void(0)" data-toggle="expand" class="btn btn-success"><i
+                                class="ion-android-expand"></i></a>
+                        <a href="javascript:void(0)" data-toggle="remove" class="btn btn-danger"><i
+                                class="ion-ios-trash-outline"></i></a>
+                    </div>
+                </div>
+                <div class="card-body collapse show" id="collapse1">
+                    <table class="table table-responsive-sm">
+                        <thead>
+                            <tr>
+                                <th>Earning</th>
+                                <th>Rate Amount</th>
+                                <th>Earn Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Basic Salary</th>
+                                <td>20000</td>
+                                <td>20000</td>
+                                <!-- <td>@mdo</td>
+                                <td>Hello</td> -->
+                            </tr>
+                            <tr>
+                                <th scope="row">House Rent
+                                    <br>
+                                    Allowance
+                                </th>
+                                <td>10000</td>
+                                <td>10000</td>
+                                <!-- <td>@fat</td> -->
+                                <!-- <td>Hello</td> -->
+                            </tr>
+                            <tr>
+                                <th scope="row">Conveyance <br>
+                                Allowance
+                                </th>
+                                <td>5000</td>
+                                <td>5000</td>
+                                <!-- <td>@twitter</td> -->
+                                <!-- <td>Hello</td> -->
+                            </tr>
+                            <tr>
+                                <th scope="row">Special Allowance <br>
+                                Allowance
+                                </th>
+                                <td>8000</td>
+                                <td>8000</td>
+                                <!-- <td>@twitter</td> -->
+                                <!-- <td>Hello</td> -->
+                            </tr>
+                            <tr>
+                                <th scope="row">Total Earning <br>
+                                Allowance
+                                </th>
+                                <td style="visibility: none;">-</td>
+                                
+                                <!-- <td>@twitter</td> -->
+                                <td>Hello</td>
+                            </tr>
+                           
+        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-12">
+            <div class="card mb-4 shadow-1">
+                <div class="card-header">
+                    <h4 class="card-header-title">
+                        Deduction
+                    </h4>
+                    <div class="card-header-btn">
+                        <a href="javascript:void(0)" data-toggle="collapse" class="btn btn-info" data-target="#collapse2"
+                            aria-expanded="true" data-original-title="" title="" data-init="true"><i
+                                class="ion-ios-arrow-down"></i></a>
+                        <a href="javascript:void(0)" data-toggle="refresh" class="btn btn-warning"><i
+                                class="ion-android-refresh"></i></a>
+                        <a href="javascript:void(0)" data-toggle="expand" class="btn btn-success"><i
+                                class="ion-android-expand"></i></a>
+                        <a href="javascript:void(0)" data-toggle="remove" class="btn btn-danger"><i
+                                class="ion-ios-trash-outline"></i></a>
+                    </div>
+                </div>
+                <div class="card-body collapse show" id="collapse2">
+                    <table class="table table-responsive-sm">
+                        <thead>
+                            <tr>
+                                <th>Deductions</th>
+                                <th>Amount</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Provident Fund</th>
+                                <td>2400</td>
+                                
+                            </tr>
+                            <tr>
+                                <th scope="row">ESIC</th>
+                                <td>0</td>
+                               
+                            </tr>
+                            <tr>
+                                <th scope="row">TDS</th>
+                                <td>0</td>
+                                
+                            </tr>
+                            <tr>
+                                <th scope="row">Other Deduction</th>
+                                <td>0</td>
+                                
+                            </tr>
+                            <tr>
+                                <th scope="row">Total
+                                    <br>
+                                    Deduction
+                                </th>
+                                <td>2400</td>
+                                
+                             
+                            </tr>
+        
+        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-12">
+            <div class="card mb-4 shadow-1">
+                <div class="card-header">
+                    <h4 class="card-header-title">
+                        Net Pay
+                    </h4>
+                    <div class="card-header-btn">
+                        <a href="javascript:void(0)" data-toggle="collapse" class="btn btn-info" data-target="#collapse2"
+                            aria-expanded="true" data-original-title="" title="" data-init="true"><i
+                                class="ion-ios-arrow-down"></i></a>
+                        <a href="javascript:void(0)" data-toggle="refresh" class="btn btn-warning"><i
+                                class="ion-android-refresh"></i></a>
+                        <a href="javascript:void(0)" data-toggle="expand" class="btn btn-success"><i
+                                class="ion-android-expand"></i></a>
+   
+                    </div>
+                </div>
+                <div class="card-body collapse show" id="collapse2">
+                    <table class="table table-responsive-sm">
+                       <thead>
+                        <!-- future -->
+                       </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Net Pay</th>
+                                <td>40600</td>
+                                
+                            </tr>
+                            <tr>
+                                <th scope="row">Payment <br> Mode:</th>
+                                <td>Cash</td>
+                               
+                            </tr>
+                            <tr>
+                                <th scope="row">Bank Name :</th>
+                                <td>ABC</td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

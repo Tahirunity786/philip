@@ -1,0 +1,162 @@
+{% extends "base/base.html" %}
+{% block title %}Announcement{% endblock title %}
+{% load static %}
+{% block content %}
+<div class="page-inner">
+    <!--================================-->
+    <!-- Main Wrapper Start -->
+    <!--================================-->
+    <div id="main-wrapper">
+        <!--================================-->
+        <!-- Breadcrumb Start -->
+        <!--================================-->
+        <div class="pageheader pd-y-25">
+            <div class="pd-t-5 pd-b-5">
+                <h1 class="pd-0 mg-0 tx-20 text-overflow">Announcement</h1>
+            </div>
+            <div class="breadcrumb pd-0 mg-0">
+                <a class="breadcrumb-item" href="/mega-soft/"><i class="icon ion-ios-home-outline"></i> Home</a>
+                <a class="breadcrumb-item" href="javascript:void(0)">Announcement</a>
+
+            </div>
+        </div>
+
+        <form action="" method="post" class="w-100">
+            <div class="row w-75">
+                {% csrf_token %}
+                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                    <label for="fdf">Date</label>
+                    <input type="date" name="fdate" id="fdf" class="form-control">
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <br>
+
+                    <button type="submit" class="btn btn-primary mt-2">Show
+
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <div class="col-md-12 col-lg-12">
+            <div class="card mb-4 shadow-1">
+                <div class="card-header">
+                    <h4 class="card-header-title">
+                        A
+                    </h4>
+                    <div class="card-header-btn">
+                        <a href="javascript:void(0)" data-toggle="collapse" class="btn btn-info"
+                            data-target="#collapse6" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
+                        <a href="javascript:void(0)" data-toggle="refresh" class="btn btn-warning"><i
+                                class="ion-android-refresh"></i></a>
+                        <a href="javascript:void(0)" data-toggle="expand" class="btn btn-success"><i
+                                class="ion-android-expand"></i></a>
+                        <a href="javascript:void(0)" data-toggle="remove" class="btn btn-danger"><i
+                                class="ion-ios-trash-outline"></i></a>
+                    </div>
+                </div>
+                <div class="card-body collapse show" id="collapse6">
+                    <table class="table table-separated table-responsive-sm">
+                        <thead>
+                            <tr>
+                                <th>No#</th>
+                                <th>Announcement</th>
+                                <th>Date</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>
+                                    <div class="media">
+                                        <img class="wd-30 img-fluid" src="{% static 'assets/images/user/user1.png'%}"
+                                            alt="Annoucement Image">
+                                        <div class="media-body mg-l-10">
+                                            <a class="lh-1 mg-0" style="cursor: pointer;">
+                                                <h5>
+
+                                                    Holiday
+                                                </h5>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>21, Jul-2003</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>
+                                    <div class="media">
+                                        <img class="wd-30 img-fluid" src="{% static 'assets/images/user/user1.png'%}"
+                                            alt="Annoucement Image">
+                                        <div class="media-body mg-l-10">
+                                            <a class="lh-1 mg-0" style="cursor: pointer;">
+                                                <h5>
+
+                                                    Holiday
+                                                </h5>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>21, Jul-2003</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>
+                                    <div class="media">
+                                        <img class="wd-30 img-fluid" src="{% static 'assets/images/user/user1.png'%}"
+                                            alt="Annoucement Image">
+                                        <div class="media-body mg-l-10">
+                                            <a class="lh-1 mg-0" style="cursor: pointer;">
+                                                <h5>
+
+                                                    Holiday
+                                                </h5>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>21, Jul-2003</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>
+                                    <div class="media">
+                                        <img class="wd-30 img-fluid" src="{% static 'assets/images/user/user1.png'%}"
+                                            alt="Annoucement Image">
+                                        <div class="media-body mg-l-10">
+                                            <a class="lh-1 mg-0" style="cursor: pointer;">
+                                                <h5>
+
+                                                    Holiday
+                                                </h5>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>21, Jul-2003</td>
+                            </tr>
+
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,82 @@
+emp_name: Employee name (max length 80).
+card: Card number (max length 12).
+emptitle: Employee title (max length 10).
+empname: Employee name (max length 55).
+fhname: Father's name (max length 55).
+fhflag: Father's name flag (max length 1).
+mname: Mother's name (max length 55).
+sname: Spouse's name (max length 55).
+doj: Date of joining.
+doc: Date of confirmation.
+dor: Date of resignation.
+dorreason: Reason for resignation (max length 55).
+dorremark: Remark for resignation (max length 55).
+dol: Date of leaving.
+dolreason: Reason for leaving (max length 55).
+paymenttype: Payment type (max length 10).
+accountno: Bank account number (max length 25).
+bank_id: Bank ID (decimal).
+ifsccode: IFSC code (max length 25).
+branch: Bank branch (max length 25).
+pf: PF flag (max length 1).
+pflimits: PF limits (max length 1).
+fpf: FPf flag (max length 1).
+vpf: VPF flag (max length 1).
+pfcode: PF code (max length 35).
+pfuanno: PF UAN number (max length 35).
+doepf: Date of EPF.
+pfabry: PF abbreviation (max length 1).
+esi: ESI flag (max length 1).
+esicode: ESI code (max length 55).
+dispensary: Dispensary name (max length 55).
+lwf: LWF flag (max length 1).
+lwfno: LWF number (max length 25).
+emptype: Employee type (max length 1).
+wagescalc: Wages calculation type (max length 1).
+earn1 to earn10: Earnings (decimal).
+gross: Gross earnings (decimal).
+foodrate, otsrate, nightrate, shrate: Rates (decimal).
+busroute: Bus route (max length 20).
+dob: Date of birth.
+gender: Gender (max length 20).
+bloodgroup: Blood group (max length 5).
+mstatus: Marital status (max length 1).
+region: Region (max length 20).
+mobileno: Mobile number (max length 20).
+aadhaarno: Aadhaar number (max length 20).
+email: Email address (max length 255).
+shifttype: Shift type (max length 10).
+shiftoption: Shift option (max length 10).
+dutyhrs: Duty hours (decimal).
+ot: Overtime flag (max length 1).
+otbs, otas, otr: Overtime types (max length 1).
+offday1, offday2, offday3: Off days (max length 3).
+offday1c: Off day 1 comment (max length 3).
+cl, sl, el: Leave balances (decimal).
+introducer: Introducer name (max length 55).
+hodlogin_id: HOD login ID (decimal).
+loginid: Login ID (max length 10).
+logintype: Login type (max length 20).
+place: Place (max length 40).
+entrydate: Entry date.
+createdby: Created by (max length 40).
+createddate: Created date.
+changedby: Changed by (max length 40).
+changeddate: Changed date.
+education: Education (max length 55).
+experience: Experience (max length 55).
+interviewdate: Interview date.
+int_by: Interviewed by (max length 55).
+app_by: Approved by (max length 55).
+dojshow: Date of joining for display (max length 10).
+verify: Verification status (max length 10).
+verifyby: Verified by (max length 55).
+verifydate: Verification date.
+app_date: Approval date.
+verifysalary, salary, ctcsalary: Salary-related fields (decimal).
+emprpf, emprlwf: Employer PF and LWF (decimal).
+otsh: Overtime shift (max length 10).
+loginpw: Login password (max length 25).
+lastpdate: Last password change date.
+active: Active status (boolean).
+oldcodeno: Old code number (max length 12).
